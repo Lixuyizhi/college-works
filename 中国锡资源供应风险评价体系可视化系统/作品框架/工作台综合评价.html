@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>综合评价</title>
+    <link rel="stylesheet" href="css/工作台综合评价.css" />
+  </head>
+  <body>
+    <!-- 头部的盒子 -->
+    <header class="header-container">
+      <div class="header-box" onclick="redirectToPage('首页.html')">首页</div>
+      <div class="header-box" onclick="redirectToPage('评价体系.html')">评价体系</div>
+      <div class="header-box" onclick="redirectToPage('工作台资源安全.html')">工作台</div>
+    </header>
+    
+    <script>
+      function redirectToPage(url) {
+        window.location.href = url;
+      }
+    </script>
+
+    <!-- 页面主体部分 -->
+    <section class="mainbox">
+    <!-- 第一列 -->
+    
+      <div class="column">
+        <div class="column">
+          <div class="box " onclick="redirectToPage('工作台资源安全.html')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
+            资源安全
+          </div>
+          <div class="box" onclick="redirectToPage('工作台贸易安全.html')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
+            贸易安全
+          </div>
+          <div class="box" onclick="redirectToPage('工作台市场安全.html')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
+            市场安全
+          </div>
+          <div class="box current" onclick="redirectToPage('工作台综合评价.html')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
+            综合评价
+          </div>
+        </div>
+        
+      </div>
+
+
+    <!-- 第二列 -->
+    <div class="column">
+      <!-- no模块制作 -->
+    <div class="no">
+      <div class="no-hd">
+          <li>2023年供应风险指数</li>
+      </div>
+    </div>
+    <!-- 历年趋势图表 -->
+    <div class="panel ">
+      <h2></h2>
+      <div id="左图" class="chart"></div>
+      <div class="panel-footer"></div>
+    </div>
+    
+    </div>
+    <!-- 第三列 -->
+    <div class="column">
+      <!-- no模块制作 -->
+    <div class="no">
+      <div class="no-hd">
+          <li>供应风险指数历年趋势</li>
+      </div>
+    </div>
+    <!-- 历年趋势图表 -->
+    <div class="panel ">
+      <h2></h2>
+      <div id="右图" class="chart"></div>
+      <div class="panel-footer"></div>
+    </div>
+    
+    </div>
+    </section>
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <!-- 先引入jquery -->
+    <script src="js/jquery.js"></script>
+    <script src="图表/综合评价/二零二三年供应风险指数.js"></script>
+    <script src="图表/综合评价/供应风险指数.js"></script>
+  </body>
+</html>

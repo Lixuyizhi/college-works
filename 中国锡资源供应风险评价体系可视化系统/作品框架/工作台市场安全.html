@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>市场安全供应风险评价</title>
+    <link rel="stylesheet" href="css/工作台.css" />
+  </head>
+  <body>
+    <!-- 头部的盒子 -->
+    <header class="header-container">
+      <div class="header-box" onclick="redirectToPage('首页.html')">首页</div>
+      <div class="header-box" onclick="redirectToPage('评价体系.html')">评价体系</div>
+      <div class="header-box" onclick="redirectToPage('工作台资源安全.html')">工作台</div>
+    </header>
+    
+    <script>
+      function redirectToPage(url) {
+        window.location.href = url;
+      }
+    </script>
+
+    <!-- 页面主体部分 -->
+    <section class="mainbox">
+    <!-- 第一列 -->
+    
+      <div class="column">
+        <div class="column">
+          <div class="box " onclick="redirectToPage('工作台资源安全.html')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
+            资源安全
+          </div>
+          <div class="box" onclick="redirectToPage('工作台贸易安全.html')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
+            贸易安全
+          </div>
+          <div class="box current" onclick="redirectToPage('工作台市场安全.html')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
+            市场安全
+          </div>
+          <div class="box" onclick="redirectToPage('工作台综合评价.html')" onmouseover="changeColor(this)" onmouseout="resetColor(this)">
+            综合评价
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- 第二列 -->
+      <div class="column">
+        <div class="panel ">
+          <h2>2023年锡进口主要来源国</h2>
+          <div id="左一" class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel line">
+          <h2>价格波动指数 </h2>
+          <div id="左二" class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+      <!-- 第三列 -->
+      <div class="column">
+        <!-- no模块制作 -->
+        <div class="no">
+          <div class="no-hd">
+            <ul>
+              <li>7.367</li>
+            </ul>
+          </div>
+          <div class="no-bd">
+            <ul>
+              <li>2023年指标</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 地图模块 -->
+        <div class="map ">
+          
+            <div class="map1"></div>
+            <div class="map2"></div>
+            <div class="map3"></div>
+            <div id="中间" class="chart"></div>
+          
+        </div>
+      </div>
+      <!-- 第四列 -->
+        <div class="column">
+          <div class="panel ">
+            <h2>主要贸易市场风险指数</h2>
+            <div id="右一" class="chart"></div>
+            <div class="panel-footer"></div>
+          </div>
+          <div class="panel ">
+            <h2>资源年消费量（万吨）</h2>
+            <div id="右二"class="chart"></div>
+            <div class="panel-footer"></div>
+          </div>
+    </section>
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <!-- 先引入jquery -->
+    <script src="js/jquery.js"></script>
+    <script src="图表/市场安全/表格汇总.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>中国锡资源供应风险评价可视化系统</title>
+    <link rel="stylesheet" href="css/首页.css" />
+  </head>
+  <body>
+    <!-- 头部的盒子 -->
+    <header class="header-container">
+      <div class="header-box" onclick="redirectToPage('首页.html')">首页</div>
+      <div class="header-box" onclick="redirectToPage('评价体系.html')">评价体系</div>
+      <div class="header-box" onclick="redirectToPage('工作台资源安全.html')">工作台</div>
+    </header>
+    
+    <script>
+      function redirectToPage(url) {
+        window.location.href = url;
+      }
+    </script>
+
+    <!--页面主体部分 --> 
+
+
+    <!-- 地图模块 -->
+    <div class="map">
+      <div id='中图'  class="chart"></div>
+    </div>
+  </div>
+
+</section>
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <!-- 先引入jquery -->
+    <script src="图表/资源供应风险评价体系.js"></script>
+
+  </body>
+</html>
